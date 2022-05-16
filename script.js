@@ -20,10 +20,21 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(typeof guess); //returns 'string' if Number function is not used
 
+  //Invalid entry
   if (!guess) {
     document.querySelector('.message').textContent = 'Invalid number!';
+
+    //Win
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'You got it!';
+
+    //styles must be written in strings
+    document.querySelector('body').style.backgroundColor = '#60b347';
+
+    document.querySelector('.number').style.cssText =
+      'width: 30rem; border: black solid 2px';
+
+    //Too high
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Too high!';
@@ -33,6 +44,8 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = 'You lose! Try again.';
       document.querySelector('.score').textContent = 0;
     }
+
+    //Too low
   } else if (guess < secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Too low!';
@@ -43,8 +56,4 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
-
-  //   if (score < 0) {
-  //     document.querySelector('.score').textContent = 0;
-  //   }
 });
