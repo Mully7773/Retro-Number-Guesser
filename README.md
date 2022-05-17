@@ -3,6 +3,11 @@
 ![License Badge](https://img.shields.io/github/license/Mully7773/Retro-Number-Guesser)
 ![Top Language](https://img.shields.io/github/languages/top/Mully7773/Retro-Number-Guesser)
 
+## Link:
+
+Play the game here:
+https://mully7773.github.io/Retro-Number-Guesser/
+
 ## Description
 
 A very simple retro-styled number guessing game I built using HTML, CSS, and vanilla JavaScript to review the fundamentals of DOM manipulation. This project was inspired by Jonas Schmedtmann's Udemy JavaScript course project.
